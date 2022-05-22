@@ -9,7 +9,7 @@ fs.readdir(path.join(__dirname, 'styles'),{withFileTypes: true},(e,files)=>{
       let data = '';
       const ReadStream = fs.createReadStream(path.join(__dirname,'styles', file.name), 'utf-8');
       ReadStream.on('data', chunk => data += chunk);
-      ReadStream.on('end', () => WriteStream.write(`\n${data}`));
+      ReadStream.on('end', () => WriteStream.write(`${data}\n`));
     }
   });
   
