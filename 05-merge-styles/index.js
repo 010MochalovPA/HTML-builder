@@ -12,7 +12,6 @@ fs.readdir(path.join(__dirname, 'styles'),{withFileTypes: true},(e,files)=>{
       ReadStream.on('end', () => WriteStream.write(`${data}\n`));
     }
   });
-  
 });
 
 
