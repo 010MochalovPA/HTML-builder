@@ -5,7 +5,6 @@ const path = require('path');
 fs.mkdir(path.join(__dirname, 'files-copy'), { recursive: true }, (err) => {
   if (err) throw err;
   console.log('Директория files-copy создана!');
-});
 
 fs.readdir(path.join(__dirname, 'files-copy'),(e,files)=>{
   files.forEach(file => {
@@ -24,3 +23,5 @@ fs.readdir(path.join(__dirname, 'files'),(e,files)=>{
   });
 });
 
+
+});
